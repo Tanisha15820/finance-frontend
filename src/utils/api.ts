@@ -1,6 +1,7 @@
 // API utility functions for backend communication
 
-const API_BASE_URL = 'http://localhost:3001/api';
+const API_BASE_URL = `${import.meta.env.VITE_API_URL}api`;
+
 
 // Helper function to get JWT token from localStorage
 const getAuthToken = (): string | null => {
