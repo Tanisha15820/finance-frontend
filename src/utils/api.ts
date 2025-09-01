@@ -1,10 +1,13 @@
 // API utility functions for backend communication
 
-const API_BASE_URL = 'https://finance-backend-0x14.onrender.com/api';
+
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001/api';
+
 
 // Helper function to get JWT token from localStorage
 const getAuthToken = (): string | null => {
   return localStorage.getItem('authToken');
+  
 };
 
 // Generic API call function
